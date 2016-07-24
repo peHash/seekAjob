@@ -316,8 +316,8 @@
 										{{bid.user.firstName}} {{bid.user.lastName}}
 									</a>
 								</span>
-								<h5 class="title m-xs-top m-0-bottom text-muted">
-									Mobile Developer
+								<h5 class="title m-xs-top m-0-bottom text-muted" ng-if="bid.user.category">
+									{{bid.user.category || 'Mobile Developer'}}
 								</h5>
 							<ul class="list-inline separated m-md-top">
 								<li ng-repeat="tag in bid.user.tags">
@@ -345,16 +345,10 @@
 						<div class="col-md-3 p-0">
 							<div class="" style="">
 								<span class="col-md-6 text-muted p-0-right">
-									مبلغ پیشنهادی
+									حقوق پیشنهادی
 								</span>
 								<span class="col-md-6 p-0-left" style=''>
 									{{bid.amount}}
-								</span>
-								<span class="col-md-6 text-muted p-0-right">
-								تعداد روز
-								</span>
-								<span class="col-md-6">
-								 {{bid.days}}
 								</span>
 							</div>
 						</div>

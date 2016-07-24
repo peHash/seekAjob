@@ -590,10 +590,18 @@ legend {
     display:block;
     float:right;
     width: 160px;
-    background-color: #00bf8c;
     color: hsla(0,0,100%,.95);
 }
-.btn-action:hover {
+.btn-action.green {
+  background-color: #00bf8c;
+}
+.btn-action.blue {
+  background-color: #33B5E6;
+}
+.btn-action.blue:hover {
+  color: #fff !important;
+}
+.btn-action.green:hover {
     background-color: #00bf8c !important;
     color: #fff !important;
 }
@@ -606,12 +614,12 @@ legend {
   width: 160px;
   background-color: transparent;
   border-color: transparent;
-  color: #00bf8c;
 }
 .btn-link:hover {
-  color: #00bf8c;
   border-color: transparent;
-
+}
+.btn-link.green {
+  color: #00bf8c;
 }
 .messageBox {
   margin-top: 25px;
@@ -724,6 +732,9 @@ legend {
   padding-right: 15px;
   padding-bottom: 8px;
 }
+.cke {
+  max-width: 800px !important;
+}
 </style>
 
 </head>
@@ -779,28 +790,20 @@ legend {
         </a>
       </div>
       <li class="dropdown">
-        <a class="navAvatar">
+        <a class="navAvatar" href="/browse" data-match-route="/browse">
           <span class="ion-speakerphone"></span>
         </a>
       </li>
       <li class="dropdown">
-        <a class="navAvatar">
+        <a class="navAvatar" data-match-route="/$" href="/">
           <span class="ion-briefcase"></span>
         </a>
       </li>
     </ul>
     <ul class="col-md-9 col-sm-9 hidden-xs nav navbar-nav primary-pages pull-right">
         <li style="max-width: 38%" data-match-route="/add"><a href="/add">
-           پروژه جدید
+           درج آگهی استخدام
         </a></li>
-        <li style="max-width: 19%" data-match-route="/$"><a href="/" style="">
-            کار ها
-        </a></li>
-        <li style="max-width: 30%">
-          <a href="/browse" data-match-route="/browse">
-            فری لنسر ها
-          </a> 
-        </li>
     </ul>
   </div>
 </div>

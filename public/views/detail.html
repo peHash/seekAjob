@@ -228,15 +228,10 @@
             width: 350px;
         }
     }
-    @media screen and (max-height: 400px) {
-        .jobStateFixed {
-            position: relative;
-        }
-    }
 </style>
 <script type="text/ng-template" id="test.html">
      <div class="modal-header">
-            <h3 class="modal-title"> ارسال پیشنهاد </h3>
+            <h3 class="modal-title">  درخواست همکاری  </h3>
         </div>
         <div class="modal-body">
             <label> 
@@ -253,7 +248,7 @@
             <textarea class="form-control" ng-model="bid.desc" ckeditor="ckoption"></textarea>
         </div>
         <div class="modal-footer">
-            <button class="btn btn-lg btn-action" ng-click="bid(bid)"> ارسال پیشنهاد </button>
+            <button class="btn btn-lg btn-action blue" ng-click="bid(bid)"> ارسال </button>
             <button class="btn btn-lg btn-link " ng-click="cancel()"> انصراف </button>
         </div>
     </div>
@@ -316,7 +311,7 @@
                                     <ul >
                                         <li>
                                             <span>
-                                                شماره پروژه :
+                                                شماره :
                                             </span>
                                             <span id="projectNumber" class="">
                                                 {{job._id | limitTo:6}}
@@ -341,38 +336,11 @@
                                     <ul id="projectDetailApplicants">
                                         <li id="totalProposal">
                                             <span id="totalProposalHeader">
-                                                تعداد پیشنهاد ها :
+                                             پیشنهاد ها :
                                             </span>
                                             <span id="proposalCount" class="digit">
-                                                22
+                                                ۰
                                             </span>
-                                        </li>
-                                    </ul>
-
-                                </div>
-                                <div class="j-infoBox__item col-md-4 col-sm-12 col-xs-12 budget pad-0-right">
-                                    <p class="heading j-infoBox__itemTitle">
-                                        <i class="ion-social-usd"></i>
-                                        بودجه
-                                    </p>
-                                    <ul >
-                                        <li>
-    قیمت ثابت
-                                        </li>
-                                        <li>
-                                          ۱،۰۰۰،۰۰۰ ریال - ۱۰،۰۰۰،۰۰۰
-                                        </li>
-                                    </ul>
-
-                                </div>
-                                <div class="j-infoBox__item col-md-4 col-sm-12 col-xs-12 budget pad-0-right">
-                                    <p class="heading j-infoBox__itemTitle">
-                                        <i class="ion-social-usd"></i>
-                                        موضوع
-                                    </p>
-                                    <ul >
-                                        <li>
-پروژه دانشجویی
                                         </li>
                                     </ul>
 
@@ -381,18 +349,10 @@
                         
                         <div id="projectVeryDetail" class="col-md-12 col-sm-12 col-xs-12">
                             <h2 class="bold margin-b5">
-                                توضیحات پروژه
+                                توضیحات
                             </h2>
                             <br>
-                            <!-- <span class="ProjectDesc">
- <pre>
-
-    {{job.longDesc}}
-
-</pre>
-                            </span> -->
                             <p ng-bind-html="job.longDesc"></p>
-                            <!-- <span class="divider-hr col-md-12 col-sm-12 col-xs-12"></span> -->
                             <span class="projectSkills">
                                 <h3 class="bold margin-b5">
                                     مهارت ها
@@ -406,13 +366,13 @@
                             <span class="divider-hr col-md-12 col-sm-12 col-xs-12"></span>
                             <span class="projectID">
                                     <a id="reportProject">
-گزارش پروژه
+گزارش 
                                     </a>
                             </span>
                             <div class="postLikeThis col-md-6 col-sm-6 col-xs-6">
                                 <!-- <input class="btn btn-post btn-lg" value="ثبت  پروژه مشابه" type="submit" style="color: #fff;" ng-click="showip()"></imput> -->
-                                <a class="btn btn-lg btn-action" ng-click="open('lg');">
-                                    ارسال پیشنهاد
+                                <a class="btn btn-lg btn-action blue" ng-click="open('lg');">
+                                    شروع کن
                                 </a>
                                 <div ng-show="selected"> Selection from a modal :
                                     {{selected}}
@@ -469,7 +429,7 @@
                                 <br>
                                 همین حالا برای به دست آوردن این شغل اقدام کن و در چند دقیقه درخواست همکاری خود را ارسال کن.
                             </p>
-                            <a class="btn btn-action" style="width: 100%; float: none;" ng-click="open('lg');">
+                            <a class="btn btn-action blue" style="width: 100%; float: none;" ng-click="open('lg');">
                                 شروع کن
                             </a>
                         </section>

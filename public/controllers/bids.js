@@ -8,8 +8,8 @@
       $scope.userProjectPage = '/myprojects/' + $scope.job.user;
       $scope.userProfilePage = '/my/' + $scope.job.user;
     } else {
-      $scope.userProjectPage = '/myprojects/' + 111;
-      $scope.userProfilePage = '/my/' + 111;
+      $scope.userProjectPage = null;
+      $scope.userProfilePage = null;
     };   
   });
  });    

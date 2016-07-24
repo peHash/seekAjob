@@ -112,12 +112,14 @@
 		vertical-align: middle;
 	}
 	.input-group .input-group-addon .ion-search {
-		color: #00bf8c;
 		margin: 0 14px;
 		width: 14px;
 		height: 14px;
 		font-size: 24px;
 		line-height: 14px;
+	}
+	.ion-search.blue {
+		color: #4DBDEB;
 	}
 	.input-group-addon:first-child {
 		position: absolute;
@@ -147,6 +149,7 @@
 		margin: 40px;
 		padding: 40px;
 		box-shadow: 0px 0px 0px 1px #E0E0E0;
+		width: 900px;
 	}
 	.oFormSearch {
 		min-height: 40px;
@@ -160,12 +163,15 @@
 	.shortname {
 		color: #33B5E6;
 	}
+	.gray {
+		background-color: #F9F9F9;
+	}
 </style>
 <div class="col-md-12">
 	<div class="oFormSearch form-group m-lg-top">
 		<div class="input-group input-group-search">
 			<label class="input-group-addon">
-				<span class="ion-search"></span>						
+				<span class="ion-search blue"></span>						
 			</label>
 			<input class="form-control searchinput" type="search" ng-maxlength="200" autocomplete="off" ng-model="searchInput"></input>
 			<div class="">
@@ -193,34 +199,27 @@
 									</div>
 								</div>
 								<div class="row" style="text-align:center;">
-									<span class="h3 m-0-top-bottom">
+									<span class="m-0-top-bottom">
 										<a class="shortname" title="" data-ng-href="/profile/{{user._id}}">
 											{{user.firstName}} {{user.lastName}}
 										</a>
 									</span>
-									<h5 class="title m-xs-top m-0-bottom text-muted">
-										Mobile Developer
+									<h5 class="title m-xs-top m-0-bottom text-muted" ng-if="user.category">
+								{{user.category || Mobile Developer}}
 									</h5>
-									<p class="m-md-top m-0-bottom">
+									<p class="m-md-top m-0-bottom" ng-if="user.city">
 										<span class="ion-location m-0-right m-xs-left"></span>
 										<strong class="city">
-ایران - اهواز
+{{user.city || ایران}}
 										</strong>
 									</p>	
-									<ul class="list-inline separated m-md-top ng-cloak" ng-show="user.tags[0]">
-									<li ng-repeat="tag in user.tags">
-										<a class="blueLink m-0" ng-href="/browse/tag/{{tag}}">
-											{{tag}}
-										</a>
-									</li>
-								</ul>
 								</div>
 							</div>
 							<div class="col-md-7">
 									<p class="oDescription m-md-top m-0-bottom ng-cloak" ng-show="user.summary">
 {{user.summary}}
 									</p>
-									<p class="oDescription m-md-top m-0-bottom bg-info ng-cloak" ng-hide="user.summary">
+									<p class="oDescription m-md-top m-0-bottom bg-info gray ng-cloak" ng-hide="user.summary">
 									<i class="ion-ios-bolt" style="color: tomato"></i>
 به نظر میاد این کاربر کمی تنبل ! چون هنوز خلاصه از فعالیت هاش ثبت نکرده !
 									</p>
@@ -235,7 +234,7 @@
 									</li>
 								</ul>
 								<div class="ng-cloak" ng-hide="user.tags[0]">
-									<p class="oDescription m-md-top m-0-bottom bg-info ng-cloak">
+									<p class="oDescription m-md-top m-0-bottom bg-info gray ng-cloak">
 										<i class="ion-ios-bolt" style="color: tomato"></i>
 به نظر میاد این کاربر کمی تنبل ! چون هنوز مهارتی به پروفایل خود اضافه نکرده است !
 									</p>

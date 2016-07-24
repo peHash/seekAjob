@@ -150,10 +150,7 @@
                                 <thead>
                                 <tr>
                                     <th class="title-col">
-                                        نام پروژه
-                                    </th>
-                                    <th class="bids-col">
-                                        پیشنهادات
+                                        استخدام های امروز
                                     </th>
                                     <th class="skills-col">
                                     مهارت ها
@@ -161,9 +158,6 @@
                                     <th class="started-col">
                                         شروع 
                                     </th>
-<!--                                         <th class="price-col">
-                                    میانگین (ریال)
-                                    </th> -->
                                     <th class="bookmark-col">
 
                                     </th>
@@ -176,9 +170,6 @@
                                         <a class="seo-url" href="/job/{{job._id}}">
                                             {{job.title}}</a>
                                     </th>
-                                    <td class="col bids-col">
-                                        {{job.bids.length || '0'}}
-                                    </td>
                                     <td class="col skills-col">
                                        <a ng-repeat="tag in job.tags" class="blueLink injob" ng-href="/browse/tag/{{tag}}">
                                             {{tag}}
@@ -187,9 +178,6 @@
                                     <td class="col started-col">
                                         <time am-time-ago="job.startedDate"></time>
                                     </td>
-<!--                                         <td class="col price-col">
-                                        10,000,000
-                                    </td> -->
                                     <td class="col bookmark-col">
                                         <a class="bookmark">
                                             <div class="bookmark-inner">
